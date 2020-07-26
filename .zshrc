@@ -72,15 +72,17 @@ alias glg='git log --abbrev-commit --no-merges --date=short --date=iso --grep'
 alias glc='git log --abbrev-commit --no-merges --date=short --date=iso origin/html..html'
 
 
+
 export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$HOME/.pyenv/shims:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
+
+export PATH="$HOME/.yarn/bin:$PATH"
 
 # export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-
-export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export PATH="/usr/local/opt/openssl@1.1/1.1.1f/bin:$PATH"
