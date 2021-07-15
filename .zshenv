@@ -24,9 +24,11 @@ export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
 export CPLUS_INCLUDE_PATH="$HOME/src/atcoder"
 
 # pyenv
-# export PYENV_ROOT="$HOME/.pyenv/shims"
-# export PATH="$PYENV_ROOT:$PATH"
-# eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init --path)"
+fi
 
 #chromedriver
 export CHOROMEDRIVER_PATH="$HOME/.chromedriver/chromedriver"
@@ -39,5 +41,5 @@ export ATCODER_TESTCASE="$HOME/.atcoder-testcase"
 
 #####
 
-alias gcc="/usr/local/bin/gcc-9"
-alias g++="/usr/local/bin/g++-9"
+# alias gcc="/usr/local/bin/gcc-11"
+# alias g++="/usr/local/bin/g++-11"

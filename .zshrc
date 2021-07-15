@@ -37,7 +37,7 @@ alias grep='grep --color'
 # alias diff="coloddiff"
 
 #brew
-alias brew_update_series='brew update && brew upgrade && brew cask upgrade'
+alias brew_update_series='brew update && brew upgrade && brew upgrade --cask'
 
 # git
 alias g="git"
@@ -61,7 +61,7 @@ alias gm='git merge'
 
 alias gpso='git push origin'
 
-alias gpl='git pull'
+alias gplo='git pull origin'
 alias gf='git fetch'
 
 # logを見やすく
@@ -71,12 +71,6 @@ alias glg='git log --abbrev-commit --no-merges --date=short --date=iso --grep'
 # ローカルコミットを表示
 alias glc='git log --abbrev-commit --no-merges --date=short --date=iso origin/html..html'
 
-
-
-export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$HOME/.pyenv/shims:$PATH"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 export PATH="$HOME/.ndenv/bin:$PATH"
 eval "$(ndenv init -)"
